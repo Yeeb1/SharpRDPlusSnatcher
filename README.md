@@ -1,6 +1,5 @@
 # SharpRDPlusSnatcher
 This tool exploits a flaw in the [Remote Desktop Plus](https://www.donkz.nl) application, which temporarily drops `.rdp` files in `%localappdata%/Temp` and fails to clean up these files efficiently. This allows to decrypt and extract credentials from these temporary files before they are passed to `mstsc.exe` (Microsoft Terminal Services Client). This program can only decrypt `.rdp` files of the current user, as the files utilize the Data Protection API (DPAPI) for encryption, which is tied to the user's session.
-## Acknowledgments
 
 ## Compilation
 

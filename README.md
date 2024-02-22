@@ -1,17 +1,6 @@
 # SharpRDPlusSnatcher
 This tool exploits a flaw in the [Remote Desktop Plus](https://www.donkz.nl) application, which temporarily drops `.rdp` files in `%localappdata%/Temp` and fails to clean up these files efficiently. This allows to decrypt and extract credentials from these temporary files before they are passed to `mstsc.exe` (Microsoft Terminal Services Client). This program can only decrypt `.rdp` files of the current user, as the files utilize the Data Protection API (DPAPI) for encryption, which is tied to the user's session.
 
-## Compilation
-
-Before compiling, add the `System.Security.Cryptography.ProtectedData` package to the solution. This package is necessary for interacting with the Data Protection API (DPAPI) to decrypt the credentials found within the `.tmp` files.
-
-You can add this package via the .NET CLI with the following command:
-
-```sh
-dotnet add package System.Security.Cryptography.ProtectedData
-```
-
-Alternatively, if you're using Visual Studio, you can manage NuGet packages for your project and add `System.Security.Cryptography.ProtectedData` from there.
 
 ## Usage
 
@@ -41,6 +30,18 @@ Upon execution, this tool first searches for any `.tmp` files that might still e
 │ Password: RebelAlliance1977!          │
 └───────────────────────────────────────┘
 ```
+
+## Compilation
+
+Before compiling, add the `System.Security.Cryptography.ProtectedData` package to the solution. This package is necessary for interacting with the Data Protection API (DPAPI) to decrypt the credentials found within the `.tmp` files.
+
+You can add this package via the .NET CLI with the following command:
+
+```sh
+dotnet add package System.Security.Cryptography.ProtectedData
+```
+
+Alternatively, if you're using Visual Studio, you can manage NuGet packages for your project and add `System.Security.Cryptography.ProtectedData` from there.
 
 ## Acknowledgments
 

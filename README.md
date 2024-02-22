@@ -45,7 +45,7 @@ Alternatively, if you're using Visual Studio, you can manage NuGet packages for 
 
 ## Acknowledgments
 
-Special thanks to the [rdp-file-password-encryptor](https://github.com/RedAndBlueEraser/rdp-file-password-encryptor) repository for providing guidelines on how to decrypt the contents of these temporary `.rdp` files.
+Special thanks to the [rdp-file-password-encryptor](https://github.com/RedAndBlueEraser/rdp-file-password-encryptor) repository for providing guidelines on how to decrypt the contents of `.rdp` files.
 
 ---
 
